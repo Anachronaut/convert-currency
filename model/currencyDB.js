@@ -1,7 +1,6 @@
-var exports = module.exports = {};
-var source = require('../routes/index.js').from_currency;
-console.log(source,"db")
-function setConvert(source){
+var source = require('../routes/index.js').from_currency; // import currency type
+
+function setConvert(source){ // sets conversion rates dependant on currency you're converting from
   if (source == 'USD'){
     module.exports = {
       EUR: 0.85,
@@ -25,8 +24,5 @@ function setConvert(source){
     };
   }
 };
-console.log(source,"db2")
+
 setConvert(source)
-console.log(source,"db3")
-console.log(exports,"dbex")
-console.log(module.exports,"dbex2")
